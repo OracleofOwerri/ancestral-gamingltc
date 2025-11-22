@@ -1,0 +1,15 @@
+{
+  "name": "ancestral-gamingltc",
+  "private": true,
+  "version": "0.2.0",
+  "scripts": {
+    "dev": "echo \"use pnpm --filter cueltc-web dev\"",
+    "lint": "pnpm -r lint",
+    "test": "pnpm -r test",
+    "build": "pnpm -r build"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "eslint": "^9.0.0"
+  }
+}

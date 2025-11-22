@@ -1,0 +1,10 @@
+FROM node:20-alpine
+WORKDIR /app
+COPY package.json pnpm-workspace.yaml tsconfig.base.json ./
+COPY services ./services
+COPY packages ./packages
+RUN npm install -g pnpm
+RUN pnpm install
+RUN pnpm --filter api-gateway build
+EXPOSE 8080
+CMD ["pnpm", "--filter", "api-gateway", "dev"]
